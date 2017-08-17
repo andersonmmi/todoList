@@ -4,6 +4,7 @@ const mustache = require('mustache-express');
 const port = 3000;
 const data = require('./data.js');
 const path = require('path');
+let todos = ["Wash the car"]
 
 app.engine('mustache', mustache());
 app.set('views', './views');
@@ -13,7 +14,7 @@ app.set('view engine', 'mustache');
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(req, res){
-  res.render('index');
+  res.render('index', {todos : todos});
 });
 
 app.listen(port, function(){
