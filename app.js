@@ -9,8 +9,8 @@ app.engine('mustache', mustache());
 app.set('views', './views');
 app.set('view engine', 'mustache');
 
-//cannot get css to serve to website
-app.use('/static', express.static(path.join(__dirname, 'public')))
+//I got css to serve to website by putting styles in a css subfolder
+app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(req, res){
   res.render('index');
