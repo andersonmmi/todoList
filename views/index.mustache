@@ -9,7 +9,7 @@
   <body>
     <p>Test</p>
     <form class="todoList" action="/" method="post">
-      <input type="text" name="todo" value="" placeholder="Add todos here">
+      <input type="text" name="todo" value="" placeholder="Add todos here" autocomplete="on">
       <button type = "submit">Add Todo</button>
       <div class="todoItems">
         {{#todos}}
@@ -17,7 +17,6 @@
             <button type="button" name={{.}}>Mark Complete</button>
             <label for={{.}}>{{.}}</label>
           </form>
-
         {{/todos}}
       <p>Completed Tasks</p>
         {{#todones}}
@@ -26,5 +25,9 @@
       </div>
 
     </form>
+    <!-- more fun with sockets -->
+    <!-- sockets breaks her because I don't have socket.io.js in my static directory -->
+    <!-- <script src="/socket.io/socket.io.js"></script>
+    <script>var socket = io();</script> -->
   </body>
 </html>

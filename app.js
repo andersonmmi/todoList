@@ -8,6 +8,9 @@ let todos = [];
 let todones = [];
 const bodyParser = require('body-parser');
 const expressValidator = require('express-validator');
+//fun wit sockets, this probably wont work :-(
+var http = require('http').Server(app);
+var io = require('socket.io')(http);
 
 app.engine('mustache', mustache());
 app.set('views', './views');
@@ -30,9 +33,14 @@ app.post('/', function(req, res){
 
 //I am attempting to get feedback from a check box click
 app.post('/check', function(req, res){
-  console.log("box checked");
+  console.log("button clicked");
   // todones.push(req.body.todoCheck);
-  res.redirect('/');
+  //res.redirect('/');
+});
+
+//My search for some way to listen for clicks has led me to experiment with socket.io
+io.on('connection', function(socket){
+  console.log('a user connected');
 });
 
 app.listen(port, function(){
