@@ -2,3 +2,7 @@
   color: blue;
   font-size: 2vw;
 }
+.todoItems{
+  display:grid;
+  grid-template-columns: 20vw;
+}

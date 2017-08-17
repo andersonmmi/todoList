@@ -8,7 +8,14 @@
   </head>
   <body>
     <p>Test</p>
-    <input type="text" name="todoInput" value="" placeholder="Add todos here">
-    {{todos}}
+    <form class="todoList" action="/" method="post">
+      <input type="text" name="todo" value="" placeholder="Add todos here">
+      <button type = "submit">Submit</button>
+      <div class="todoItems">
+        {{#todos}}
+          <input type = "checkbox">{{.}}</input>
+        {{/todos}}
+      </div>
+    </form>
   </body>
 </html>
