@@ -13,5 +13,13 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Aaron Anderson",
-  "license": "ISC"
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andersonmmi/todoList.git"
+  },
+  "bugs": {
+    "url": "https://github.com/andersonmmi/todoList/issues"
+  },
+  "homepage": "https://github.com/andersonmmi/todoList#readme"
 }
