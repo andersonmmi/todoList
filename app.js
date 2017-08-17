@@ -4,8 +4,10 @@ const mustache = require('mustache-express');
 const port = 3000;
 const data = require('./data.js');
 const path = require('path');
-let todos = []
+let todos = [];
+let todones = [];
 const bodyParser = require('body-parser');
+const expressValidator = require('express-validator');
 
 app.engine('mustache', mustache());
 app.set('views', './views');
@@ -15,6 +17,7 @@ app.set('view engine', 'mustache');
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(expressValidator());
 
 app.get('/', function(req, res){
   res.render('index', {todos : todos});
