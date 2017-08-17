@@ -10,10 +10,10 @@
     <p>Test</p>
     <form class="todoList" action="/" method="post">
       <input type="text" name="todo" value="" placeholder="Add todos here">
-      <button type = "submit">Submit</button>
+      <button type = "submit">Add Todo</button>
       <div class="todoItems">
         {{#todos}}
-          <input type = "checkbox">{{.}}</input>
+          <input type = "checkbox" name = "todoCheck" value = {{.}}>{{.}}</input>
         {{/todos}}
         {{#todones}}
           <li>{{.}}</li>
