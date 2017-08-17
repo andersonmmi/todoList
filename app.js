@@ -5,13 +5,13 @@ const port = 3000;
 const data = require('./data.js');
 
 app.engine('mustache', mustache());
-app.set('vews', './views');
+app.set('views', './views');
 app.set('view engine', 'mustache');
 
-app.use(express.static(__dirname+'/public'));
+// app.use(express.static(__dirname+'/public'));
 
-app.get('/index', function(req, res){
-  res.render('index',data);
+app.get('/', function(req, res){
+  res.render('index');
 });
 
 app.listen(port, function(){
