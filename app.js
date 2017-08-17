@@ -29,8 +29,10 @@ app.post('/', function(req, res){
 });
 
 //I am attempting to get feedback from a check box click
-app.get('/:todoCheck', function(req, res){
-  console.log(req.body.todoCheck);
+app.post('/check', function(req, res){
+  console.log("box checked");
+  // todones.push(req.body.todoCheck);
+  res.redirect('/');
 });
 
 app.listen(port, function(){

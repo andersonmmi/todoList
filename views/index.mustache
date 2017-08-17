@@ -13,8 +13,13 @@
       <button type = "submit">Add Todo</button>
       <div class="todoItems">
         {{#todos}}
-          <input type = "checkbox" name = "todoCheck" value = {{.}}>{{.}}</input>
+          <form class="todoLine" action="/check" method="post">
+            <button type="button" name={{.}}>Mark Complete</button>
+            <label for={{.}}>{{.}}</label>
+          </form>
+
         {{/todos}}
+      <p>Completed Tasks</p>
         {{#todones}}
           <li>{{.}}</li>
         {{/todones}}

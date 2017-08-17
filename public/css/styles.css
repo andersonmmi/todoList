@@ -4,5 +4,15 @@
 }
 .todoItems{
   display:grid;
-  grid-template-columns: 20vw;
+  grid-template-columns: 50vw;
+}
+.todoLine{
+  display:flex;
+  flex-direction: row;
+}
+button{
+  width:20vw;
+}
+label{
+  width: 29vw;
 }
